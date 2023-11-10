@@ -310,6 +310,9 @@ ans2 = search_max(0.0,1.0,5,6,cal_accu_func2)
 answers["Q2"]=list(ans2)
 
 # %%
+answers
+
+# %%
 def jaccard_sim(set1,set2):
     return len(set1.intersection(set2))/len(set1.union(set2))
 
@@ -346,11 +349,15 @@ def my_pred_play_model3(threshold:float,
     predictions.close()
 
 # %%
+my_pred_play_model3(0.03)
+calculate_pred_play_accu()
+
+# %%
 def cal_accu_func3(thsld):
     my_pred_play_model3(thsld)
     return calculate_pred_play_accu()
 
-ans3 = search_max(0.0,1.0,6,6,cal_accu_func3)
+ans3 = search_max(0.0,0.2,6,6,cal_accu_func3)
 
 # %%
 ans3
